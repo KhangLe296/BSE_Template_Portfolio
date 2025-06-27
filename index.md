@@ -36,10 +36,10 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- I was able to reconnect my two bluetooth module and made sure they connected perfectly. I also made the car run by moving my hand on the micro
-- It was very easy to fix my problem of bluetooth module not returning anything
-- My bluetooth module did not return anything while in AT mode when it was supposed to
-- Change controller to joysticks and build the arm
+- I was able to reconnect my two Bluetooth modules and made sure they connected perfectly. I also made the car run by moving my hand on the micro
+- It was very easy to fix my problem of Bluetooth module not returning anything
+- My Bluetooth module did not return anything while in AT mode when it was supposed to
+- Change the controller to joysticks and build the arm
 
 # First Milestone
 
