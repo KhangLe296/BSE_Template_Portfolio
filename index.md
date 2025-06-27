@@ -36,16 +36,16 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+- I was able to reconnect my two bluetooth module and made sure they connected perfectly. I also made the car run by moving my hand on the micro
+- It was very easy to fix my problem of bluetooth module not returning anything
+- My bluetooth module did not return anything while in AT mode when it was supposed to
+- Change controller to joysticks and build the arm
 
 # First Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<<iframe width="966" height="543" src="https://www.youtube.com/embed/BKX8kk_mlT8" title="Khang L  Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/BKX8kk_mlT8" title="Khang L  Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - I have an Uno, which will be the main brain of my car; it will send out information for my motors to run. I have a microcontroller as the main brain for my glove, which will take information from the accelerometer, then send it to the Bluetooth. Uno will receive information from the Bluetooth module to run
