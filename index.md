@@ -33,9 +33,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/iNbLIMv6Etc" title="Khang L Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - I was able to reconnect my two Bluetooth modules and made sure they connected perfectly. I also made the car run by moving my hand on the micro
 - It was very easy to fix my problem of Bluetooth module not returning anything
 - My Bluetooth module did not return anything while in AT mode when it was supposed to
@@ -46,8 +45,6 @@ For your second milestone, explain what you've worked on since your previous mil
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="951" height="535" src="https://www.youtube.com/embed/BKX8kk_mlT8" title="Khang L  Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
 - I have an Uno, which will be the main brain of my car; it will send out information for my motors to run. I have a microcontroller as the main brain for my glove, which will take information from the accelerometer, then send it to the Bluetooth. Uno will receive information from the Bluetooth module to run
 - I built the car chassis and made it run
 - I need to make the accelerometer work
@@ -59,19 +56,183 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-```c++
+Here is my code for my hand
+```
+int xL, yR, moveable = 0;
+
+int xL_center = 490;
+int yR_center = 490;
+
+void setup() { 
+ Serial.begin(38400);
+ Serial1.begin(38400); 
+} 
+
+void read_joystick(){
+  xL = analogRead(A0);
+  yR = analogRead(A5);
+}
+void loop(){
+  read_joystick();
+  if (!((xL_center - 30) < xL && (xL_center + 30) > xL)) {
+    if (xL < 468) {
+      moveable = 1;
+      Serial.println("f");
+      Serial1.write('f');
+    }
+    if (xL > 600) {
+      moveable = 1;
+      Serial.println("b");
+      Serial1.write('b');  
+    }
+  }
+
+  else if (!((yR_center - 30) < yR && (yR_center + 30) > yR)) {
+    if (yR < 456) {
+      moveable = 1;
+      Serial1.write('r');
+      Serial.println("r");
+    }
+    if (yR > 524) {
+      moveable = 1;
+      Serial1.write('l');
+      Serial.println("l");
+    }
+  }
+
+  else{
+    Serial.println("s");
+    Serial1.write('s'); 
+  }
+}
+```
+Here is my code for the car
+```
+#include <SoftwareSerial.h>
+
+#define rx 2
+#define tx 3
+
+char input_hand;
+const int A1A=11;
+const int A1B=10;
+const int A2A=5;
+const int A2B=4;
+const int A3A=7;
+const int A3B=6;
+const int A4A=9;
+const int A4B=8;
+
+SoftwareSerial configBt(rx, tx);
+long tm,t,d;
+
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode(tx, OUTPUT);
+  pinMode(rx, INPUT);
+
+  pinMode(A1A, OUTPUT);
+  pinMode(A1B, OUTPUT);
+  pinMode(A2A, OUTPUT);
+  pinMode(A2B, OUTPUT);
+  pinMode(A3A, OUTPUT);
+  pinMode(A3B, OUTPUT);
+  pinMode(A4A, OUTPUT);
+  pinMode(A4B, OUTPUT);
+}
+
+void forward() {
+  digitalWrite(A1A,LOW);
+  digitalWrite(A1B,HIGH);
+  digitalWrite(A2A,LOW);
+  digitalWrite(A2B,HIGH);
+  digitalWrite(A3A,LOW);
+  digitalWrite(A3B,HIGH);
+  digitalWrite(A4A,LOW);
+  digitalWrite(A4B,HIGH);
+  
+}
+
+void backward() {
+  digitalWrite(A1A,HIGH);
+  digitalWrite(A1B,LOW);
+  digitalWrite(A2A,HIGH);
+  digitalWrite(A2B,LOW);
+  digitalWrite(A3A,HIGH);
+  digitalWrite(A3B,LOW);
+  digitalWrite(A4A,HIGH);
+  digitalWrite(A4B,LOW);
+}
+
+void left() {
+  digitalWrite(A1A,LOW);
+  digitalWrite(A1B,HIGH);
+  digitalWrite(A3A,LOW);
+  digitalWrite(A3B,HIGH);
+  digitalWrite(A2A,HIGH);
+  digitalWrite(A2B,LOW);
+  digitalWrite(A4A,HIGH);
+  digitalWrite(A4B,LOW);
+}
+
+void right() {
+  digitalWrite(A1A,HIGH);
+  digitalWrite(A1B,LOW);
+  digitalWrite(A3A,HIGH);
+  digitalWrite(A3B,LOW);
+  digitalWrite(A2A,LOW);
+  digitalWrite(A2B,HIGH);
+  digitalWrite(A4A,LOW);
+  digitalWrite(A4B,HIGH);
+}
+
+void coasting() {
+  digitalWrite(A1A,LOW);
+  digitalWrite(A1B,LOW);
+  digitalWrite(A3A,LOW);
+  digitalWrite(A3B,LOW);
+  digitalWrite(A2A,LOW);
+  digitalWrite(A2B,LOW);
+  digitalWrite(A4A,LOW);
+  digitalWrite(A4B,LOW);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if(configBt.available()) {
+    input_hand = configBt.read();
+  }
 
+  if (configBt.available()) {
+  Serial.print((char)configBt.read());
+  }
+  if (Serial.available())
+  {
+    configBt.write(Serial.read());
+  }
+
+  if (input_hand == 'f') {
+    forward();
+    Serial.println(input_hand);
+  }
+  if (input_hand == 'b') {
+    backward();
+    Serial.print(input_hand);
+  }
+  if (input_hand == 'l') {
+    left();
+    Serial.print(input_hand);
+  }
+  if (input_hand == 'r') {
+    right();
+    Serial.print(input_hand);
+  }
+  if (input_hand == 's') {
+    coasting();
+    Serial.print(input_hand);
+  }
 }
 ```
-
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
