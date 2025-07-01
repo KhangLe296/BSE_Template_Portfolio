@@ -29,8 +29,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 # Second Milestone
 <iframe width="951" height="535" src="https://www.youtube.com/embed/iNbLIMv6Etc" title="Khang L Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- I was able to reconnect my two Bluetooth modules and made sure they connected perfectly. I also made the car run by moving my hand on the micro
-- It was very easy to fix my problem of Bluetooth module not returning anything
+- I was able to reconnect my two Bluetooth modules and make sure they connected perfectly. I also made the car run by moving my hand on the micro
+- It was very easy to fix my problem of the Bluetooth module not returning anything
 - My Bluetooth module did not return anything while in AT mode when it was supposed to
 - Change the controller to joysticks and build the arm
 
@@ -42,14 +42,94 @@ For your final milestone, explain the outcome of your project. Key details to in
 - I will make the accelerometer work and make sure the Bluetooth connection is stable
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-Here is my code for my hand
+Here is the code for my hand using gesture control
 ```
-int xL, yR, moveable = 0;
+#include <Wire.h>
+const int MPU = 0x68; 
+int16_t AcX, AcY, AcZ;
+
+int moveable = 0;
+
+void setup() {
+ Serial.begin(38400);
+ Serial1.begin(38400);
+
+ Wire.begin();
+ Wire.beginTransmission(MPU);
+ Wire.write(0x6B);
+ Wire.write(0);
+ Wire.endTransmission(true);
+ delay(500); 
+}
+
+void read_MPU() {
+  Wire.beginTransmission(MPU);
+  Wire.write(0x3B); 
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU, 6, true); 
+
+  AcX = Wire.read() << 8 | Wire.read(); 
+  AcY = Wire.read() << 8 | Wire.read(); 
+  AcZ = Wire.read() << 8 | Wire.read(); 
+
+  AcX = map(AcX, -17000, 17000, 0, 180);
+  AcY = map(AcY, -17000, 17000, 0, 180);
+  AcZ = map(AcZ, -17000, 17000, 0, 180);
+}
+
+void loop() {
+  read_MPU();
+
+  Serial.print(AcX);
+  Serial.print(" ");
+  Serial.print(AcY);
+  Serial.print(" ");
+  Serial.print(AcZ);
+  Serial.println(" ");
+  if (AcX < 60 && moveable == 0) { 
+    moveable = 1;
+    Serial1.write('f');
+    Serial.println("f");
+  }
+  if (AcX > 130 && moveable == 0) {
+    
+    Serial1.write('b');
+    Serial.println("b");
+  }
+  if (AcY < 60 && moveable == 0) {
+    moveable = 1;
+    Serial1.write('l');
+    Serial.println("l");
+  }
+  if (AcY > 130 && moveable == 0) {
+    moveable = 1;
+    Serial1.write('r');
+    Serial.println("r");
+  }
+
+  if ((AcX > 70) && (AcX < 120) && (AcY > 70) && (AcY < 120) && (moveable == 1)) {
+    moveable = 0;
+    Serial1.write('s');
+    Serial.println("s");
+  }
+//  put your main code here, to run repeatedly:
+ if (Serial1.available()) {
+   Serial.print((char)Serial1.read());
+ }
+ if (Serial.available())
+ {
+   Serial1.write(Serial.read());
+ }
+}
+```
+Here is my code for my hand using joysticks
+```
+int xL, yR = 0;
 
 int xL_center = 490;
 int yR_center = 490;
