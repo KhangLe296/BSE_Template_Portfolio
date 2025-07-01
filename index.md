@@ -84,7 +84,6 @@ void read_MPU() {
 
 void loop() {
   read_MPU();
-
   Serial.print(AcX);
   Serial.print(" ");
   Serial.print(AcY);
@@ -310,9 +309,10 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Adruino Uno | Logic control for car component | 16.99$ | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"](https://www.amazon.com/ELEGOO-Board-ATmega328P-ATMEGA16U2-Compliant/dp/B01EWOE0UU/ref=sr_1_2?crid=2BRFYS2JAPDE6&dib=eyJ2IjoiMSJ9.MazmhFfn-DF8W5oyX_S-tNl6onbpYQvEhqFzrIDbT0ZezZZ8NI_G4aajMUYhonXcvqjYOfW14bI5Y0AXdBe1QlouZk03UbKB5DAATSM1NpxmqHfaVwIJIJDDQRs9U9Q6QFqdrSsgyHPr7sFPTJVmtwrzzlP4TDs6U5BykvbDjZ4QcRy9-sGTEHaEchHiHMCaMCHAmawPKdInak3uAmDak6-5t4wCPkEVY1qTI6dxPzY._ECh395AhE7Ky4w0kiks5GSkZL6yzyMejCNu_b0lp-A&dib_tag=se&keywords=arduino+uno&qid=1751379951&sprefix=adurino%2Caps%2C971&sr=8-2)> Link </a> |
+| Adruino Micro | Logic control for hand component | 23.00$ | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Arduino-Micro-Headers-A000053-Controller/dp/B00AFY2S56/ref=sr_1_1?crid=1QBJG0WKYKJBX&dib=eyJ2IjoiMSJ9.KYXhMLqhDqOc2MMWNBuX3o6Z704f6o9819WeGW6BNwuEkw-kQMAdN-XGU3occ2tFEmd07g5a55sxCbKtZJmGjtzHBYBM4FwRfFOuVUFqmtK4gJ9VtQeQn77IZ3SsWkgSOXsanpr4CNq2e4-0fh5nh33Krb5XjAZpmPJcI0967lDgCp-FB8-bwHlP9uPp_ro5Lb7wRJ03hLc0Jzl32SpgJC5GPDvp4RCsLYBRq3yuKTo.V5vDAUcxO9CATmV45rlownnLeruS9FjKQr1eZTANlIE&dib_tag=se&keywords=arduino%2Bmicro&qid=1751380055&sprefix=arduino%2Bmicron%2Caps%2C560&sr=8-1&th=1)"> Link </a> |
+| MPU-6050 | Acceleration measurement for hand component | 10.99$ | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Pre-Soldered-Accelerometer-Raspberry-Compatible-Arduino/dp/B0BMY15TC4/ref=sr_1_2?crid=3M6BN88DE6IMR&dib=eyJ2IjoiMSJ9.nQ-HfKOFyZoszrV3cxLK6szL_dfkU7ZnseUB1MbsDUAMCeIYm-9LTdm85DpoJu1zm4P44mIcTQ2hArbVEAgrPPw42IbMsfRgi-hgHRhjW192NxesINXZybjqca2A94pkxSR2Wn7XOzzhQoF-3cHswozKrzaBDyKN-LkfhwlNpi2TXPuQI_VkO2rkF0XEjByianLTyeokOF0MTRK7KaX7t2JD0kBqyChH2V1mIPpXeSU.wVF0DwCzvjnyEUODRtKfMqYhbdSqd-GGVEbWNIkSzdM&dib_tag=se&keywords=mpu+6050&qid=1751380158&sprefix=mpu+6050%2Caps%2C854&sr=8-2)"> Link </a> |
+| HC-05 | Bluetooth module | 9.99$ | <a href="[[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Pre-Soldered-Accelerometer-Raspberry-Compatible-Arduino/dp/B0BMY15TC4/ref=sr_1_2?crid=3M6BN88DE6IMR&dib=eyJ2IjoiMSJ9.nQ-HfKOFyZoszrV3cxLK6szL_dfkU7ZnseUB1MbsDUAMCeIYm-9LTdm85DpoJu1zm4P44mIcTQ2hArbVEAgrPPw42IbMsfRgi-hgHRhjW192NxesINXZybjqca2A94pkxSR2Wn7XOzzhQoF-3cHswozKrzaBDyKN-LkfhwlNpi2TXPuQI_VkO2rkF0XEjByianLTyeokOF0MTRK7KaX7t2JD0kBqyChH2V1mIPpXeSU.wVF0DwCzvjnyEUODRtKfMqYhbdSqd-GGVEbWNIkSzdM&dib_tag=se&keywords=mpu+6050&qid=1751380158&sprefix=mpu+6050%2Caps%2C854&sr=8-2)](https://www.amazon.com/DSD-TECH-HC-05-Pass-through-Communication/dp/B01G9KSAF6/ref=sr_1_1?crid=1TUHYH23IUN77&dib=eyJ2IjoiMSJ9.VZL1p5RDGQw7c8DXaqrVkRyfFEBz0HhuagQj9O7D5y6hbVcaugJQgfkVGgef-i5r_1ATgBKUe8c_pefUUiDCoUpSsmi0TayQABnBhE-ZGsks3eHghfpUM22MqIz4rEEPOWIvqPPbZrHyF0fJX7sq06vS3OehkOGmSylXJ51KF0Zs2lWEjAM8A_vZm3f3m24Q46YqNoDXspogzsnpDbDiaoNXJTMTAfeeSyeB5jDssak.iW5aCCcJcWVvWephNMCqoUKzHsuo1oZfPXnZ9gGIejA&dib_tag=se&keywords=hc-05+bluetooth+module&qid=1751380293&sprefix=hc-05+blu%2Caps%2C677&sr=8-1)"> Link </a> |
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
