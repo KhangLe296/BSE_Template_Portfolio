@@ -3,7 +3,7 @@ I am making a car that can be moved by how I move my hand!!! Since this car cann
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Khang L | The Athenian School | Robotics | Incoming Junior
+| Khang L | The Athenian School | Robotics | Incoming Junior |
 
 ![Headstone Image](IMG_0877.png)
   
