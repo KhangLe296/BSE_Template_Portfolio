@@ -16,13 +16,12 @@ You should comment out all portions of your portfolio that you have not complete
 ![Headstone Image](logo.svg)
   
 # Final Milestone
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/ND-5gXI1vR4" title="Khang L Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+- I have finished my modification by replacing the gesture control with joystick control
+- My biggest challenge was making the two bluetooth modules to work together as well as connecting consistantly
+- I learnt how to wire the components of the car as well as how to debug. I learnt how to code for the car and the hand in C++.
+- I hope to achieve my dream of mechanical engineering in the future
 
 
 
