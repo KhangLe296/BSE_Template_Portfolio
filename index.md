@@ -10,7 +10,7 @@ I am making a car that can be moved by how I move my hand!!! Since this car cann
 |:--:|:--:|:--:|:--:|
 | Khang L | The Athenian School | Robotics | Incoming Junior
 
-![Headstone Image](IMG_0877.HEIC)
+![Headstone Image](IMG_0877.png)
   
 # Final Milestone
 <iframe width="951" height="535" src="https://www.youtube.com/embed/ND-5gXI1vR4" title="Khang L Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
