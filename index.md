@@ -1,11 +1,6 @@
 # Hand Gestured control car
 I am making a car that can be moved by how I move my hand!!! Since this car cannot turn to I need to turn one side of the wheels to the opposite of the other side. I use an accelerometer to determine which way my hand is pointing at so it can send information to the 
 
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Khang L | The Athenian School | Robotics | Incoming Junior
