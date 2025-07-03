@@ -18,7 +18,7 @@ I am making a car that can be moved by how I move my hand!!! Since this car cann
 <iframe width="951" height="535" src="https://www.youtube.com/embed/ND-5gXI1vR4" title="Khang L Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - I have finished my modification by replacing the gesture control with joystick control
-- My biggest challenge was making the two bluetooth modules to work together as well as connecting consistantly
+- My biggest challenge was making the two Bluetooth modules work together as well as connecting consistently
 - I learnt how to wire the components of the car as well as how to debug. I learnt how to code for the car and the hand in C++.
 - I hope to achieve my dream of mechanical engineering in the future
 
@@ -40,7 +40,7 @@ I am making a car that can be moved by how I move my hand!!! Since this car cann
 - I will make the accelerometer work and make sure the Bluetooth connection is stable
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
+![Headstone Image](Schematics.png)
 
 # Code
 Here is the code for my hand using gesture control
