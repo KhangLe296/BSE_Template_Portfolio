@@ -10,9 +10,7 @@ I am making a car that can be moved by how I move my hand!!! Since this car cann
 |:--:|:--:|:--:|:--:|
 | Khang L | The Athenian School | Robotics | Incoming Junior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
-![Headstone Image](logo.svg)
+![Headstone Image](IMG_0877.HEIC)
   
 # Final Milestone
 <iframe width="951" height="535" src="https://www.youtube.com/embed/ND-5gXI1vR4" title="Khang L Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
